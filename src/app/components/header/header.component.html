@@ -1,0 +1,27 @@
+<header>
+    <nav class="mb-4 navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">Edwin Harmata - Front-end Jedi!</a>
+        <button class="navbar-toggler" type="button" (click)="isOpen = !isOpen" aria-controls="navbarScroll" [attr.aria-expanded]="isOpen" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+        <div class="collapse navbar-collapse" [ngClass]="{'show': isOpen}" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+            <li class="nav-item">
+                <a routerLink="" [routerLinkActiveOptions]="{exact:
+                    true}" routerLinkActive="active" class="nav-link" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="about" routerLinkActive="active" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="projects" routerLinkActive="active" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="contact" routerLinkActive="active" class="nav-link">Contact</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+</header>

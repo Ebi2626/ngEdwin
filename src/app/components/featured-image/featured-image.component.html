@@ -1,0 +1,2 @@
+<app-loader *ngIf="!dataDownloaded"></app-loader>
+<img class="img-fluid mx-auto my-3 d-block" *ngIf="dataDownloaded && src.length > 0" [src]="src" [alt]="description">

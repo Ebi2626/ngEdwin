@@ -1,0 +1,11 @@
+  <app-loader *ngIf="!dataDownloaded"></app-loader>
+  <main class="container" *ngIf="dataDownloaded">
+      <h1 class="text-center display-4" [innerHTML]="post.title"></h1>
+      <time [attr.datetime]="post.date">{{post.date}}</time>
+      <app-featured-image *ngIf="post.featured_media !== 0" [id]="post.featured_media" [startDownloading]="dataDownloaded"></app-featured-image>
+      <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+              <div [innerHTML]="post.content"></div>
+          </div>
+      </div>
+    </main>

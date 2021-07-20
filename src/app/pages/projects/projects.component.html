@@ -1,0 +1,12 @@
+<main class="container">
+    <h1>Projects</h1>
+    <p>During my adventure on the front-end I have tried to dive into many technologies. I belive in philosophy of learning by doing so to discover how some technology works I have always try to prepare some simple project.</p>
+    <p>Below you can see some examples of my learning by doing.</p>
+
+    <ul *ngIf="projects.length > 0 && isDownloading === false">
+        <li *ngFor="let project of projects">
+            <app-project [project]="project"></app-project>
+        </li>
+    </ul>
+    <app-loader *ngIf="isDownloading === true"></app-loader>
+</main>

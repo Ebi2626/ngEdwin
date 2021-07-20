@@ -1,0 +1,11 @@
+<h3>{{project.name}}: <a [href]="project.link_url">{{project.link_text}}</a></h3>
+    <dl>
+        <dt>Description:</dt>
+        <dd>{{project.description}}</dd>
+        <dt>Used technologies:</dt>
+        <dd>
+            <ul>
+                <li *ngFor="let technology of project.technologies">{{technology}}</li>
+            </ul>
+        </dd>
+    </dl>

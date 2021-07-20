@@ -1,0 +1,9 @@
+<a [routerLink]="['/posts', post.id]" class="post-excerpt">
+  <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" [innerHTML]="post.title"></h5>
+        <app-featured-image *ngIf="post.featured_media !== 0" [startDownloading]="dataDownloaded" [id]="post.featured_media"></app-featured-image>
+        <p class="card-text" [innerHTML]="post.excerpt"></p>
+      </div>
+    </div>
+</a>
