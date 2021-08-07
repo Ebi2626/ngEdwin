@@ -1,0 +1,23 @@
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+main {
+    &.container {
+        min-height: calc(100vh - 220px);
+        @media all and (min-width:310px){
+            min-height: calc(100vh - 200px);
+        }
+        @media all and (min-width: 383px){
+            min-height: calc(100vh - 160px);
+        }
+        @media all and (min-width: 768px){
+            min-height: calc(100vh - 176px);
+        }
+        @media all and (min-width: 992px){
+            min-height: calc(100vh - 160px);
+        }
+        
+    }
+}

@@ -13,7 +13,7 @@ export class ProjectComponent implements OnInit {
       description: '',
       link_text: '',
       link_url: '',
-      technologies: []
+      technologies: <any>[]
   }
 
   constructor() { }

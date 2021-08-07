@@ -18,7 +18,7 @@ export class PostComponent implements OnInit {
     title: '',
     content: '',
     date: '',
-    categories: [],
+    categories: <any>[],
     featured_media: 0
   }
 
