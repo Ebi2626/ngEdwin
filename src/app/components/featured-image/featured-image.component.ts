@@ -22,13 +22,12 @@ export class FeaturedImageComponent implements OnInit, OnChanges {
   constructor(private service: RequestService) {
    }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this)
     this.startDownloading && !this.dataDownloaded && this.getImage()
   }
 
   getImage = () => {
     this.service.getFeaturedImageNumber(this.id).subscribe(
-      (el:any) => {
+      (el: any) => {
         this.src = el.guid.rendered;
         this.description = el.alt_text;
         this.dataDownloaded = true;

@@ -18,11 +18,10 @@ export class PostExcerptComponent implements OnInit, OnChanges {
   
   dataDownloaded: boolean = false;
 
-
   constructor() { }
+
   ngOnChanges(changes: SimpleChanges): void {
     this.post.id !== 0 && (this.dataDownloaded = true);
-    console.log(this.post)
   }
 
   ngOnInit(): void {

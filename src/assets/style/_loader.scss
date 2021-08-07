@@ -1,5 +1,6 @@
 .loader-container {
+        height: 200px;
     @media all and (min-width: 400px){
-        height: calc(100vh - 160px);
+        height: 400px;
     }
 }

@@ -9,6 +9,7 @@ import {RequestService} from '../../services/request.service'
 export class HomeComponent implements OnInit {
 
   isEmpty = true;
+  dataLoaded = false;
 
   posts = [
     {
@@ -46,7 +47,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.request.getPosts().subscribe(
       (data) => this.passDataIntoPost(data),
-      (error) => console.log(error) 
+      (error) => {
+        console.log(error)
+        this.isEmpty = true;
+        this.dataLoaded = true;
+      } 
     )
   }
 

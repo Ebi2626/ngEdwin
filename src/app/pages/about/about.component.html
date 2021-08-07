@@ -1,17 +1,22 @@
 <main class="container">
-    <h1>About me</h1>
-    <p>What the hell mean's "front-end jedi"? You could ask and it would be a good question.</p>
-    <p>During my first work in the frontend I discover how much the dark side of power can control software engineering.</p>
-    <p>To resist powers of deadlines, business pressure and shitty practicies dictated by clients who always wants to save on development I decided to create my own set of rules which I can't broke even, when dark side will have advantage over good programmers.</p>
-    <p>This is my philosphy of front-end jedi!</p>
-    
-    <h2>My skills</h2>
-    <p>To be complete developer I decide to dive into all IT knowledge in purpose to get the big picture in software engineering.</p>
-    <p>That's why I have really wide, but not really expertise knowledge in IT. Below you can see my list of skills with short description about it and my personal evaluation of its depth.</p>
-    <ul *ngIf="!skillDownloading && skills[0].skill !== ''">
-        <li *ngFor="let skill of skills">
-            <app-skill [skill]="skill"></app-skill>
-        </li>
-    </ul>
-    <app-loader *ngIf="skillDownloading"></app-loader>
+    <section>
+        <h1>O mnie</h1>
+        <p>Co do cholery ma oznaczać 'Front-end Jedi'? Moglibyście zapytać i byłoby to dobre pytanie.</p>
+        <p>Podczas pierwszej pracy jako front-end developer odkryłem jak bardzo ciemna strona mocy kontroluje inżynierię oprogramowania.</p>
+        <p>Żeby stawić czoła mrocznym siłom deadline'ów, presji biznesowej i złym praktykom wytwarzania oprogramowania narzucanym przez klinetów 
+            szukających oszczędności na developmencie, postanowiłem ustanowić własny zestaw zasad, których będę bronił za wszelką cenę.</p>
+        <p>Oto i droga front-endowego Jedi!</p>
+    </section>
+    <section>
+        <h2>Moje umiejętności</h2>
+        <p>By zostać kompletnym developerem zdecydowałem się zanurkować głęboko w nieskończone odmęty świata IT i zyskać szerszy obraz na inżynierię oprogramowania.</p>
+        <p>Właśnie dlatego zestaw moich umiejętności choć nie zawiera wielu dobrze rozwiniętych specjalizacji, to obejmuje swą szerokością niemal każdy obszar związany z programowaniem.</p>
+        <ul *ngIf="!skillDownloading && skills">
+            <li *ngFor="let skill of skills">
+                <app-skill [skill]="skill"></app-skill>
+            </li>
+        </ul>
+        <app-loader *ngIf="skillDownloading"></app-loader>
+        <p class="my-5 h4 font-weight-normal text-center" *ngIf="!skillDownloading && !skills">Przepraszamy, wystąpił błąd podczas ładowania danych. Spróbuj ponownie później</p>
+    </section>
 </main>

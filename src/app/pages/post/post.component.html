@@ -1,11 +1,15 @@
   <app-loader *ngIf="!dataDownloaded"></app-loader>
   <main class="container" *ngIf="dataDownloaded">
-      <h1 class="text-center display-4" [innerHTML]="post.title"></h1>
-      <time [attr.datetime]="post.date">{{post.date}}</time>
-      <app-featured-image *ngIf="post.featured_media !== 0" [id]="post.featured_media" [startDownloading]="dataDownloaded"></app-featured-image>
-      <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8">
-              <div [innerHTML]="post.content"></div>
+      <section>
+          <h1 class="text-center display-4 mb-4" [innerHTML]="post.title"></h1>
+          <div class="bg-white p-4 drawing-borders">
+              <time class="mb-2" [attr.datetime]="post.date">{{post.date | date:"dd.MM.YYYY" }}</time>
+              <app-featured-image *ngIf="post.featured_media !== 0" [id]="post.featured_media" [startDownloading]="dataDownloaded"></app-featured-image>
+              <div class="row justify-content-center">
+                  <div class="col-12 col-md-10 col-lg-8">
+                      <div [innerHTML]="post.content"></div>
+                  </div>
+              </div>
           </div>
-      </div>
+      </section>
     </main>

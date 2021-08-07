@@ -7,31 +7,30 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class RequestService {
-  // 'http://student16.websitter48.pl'
-  // 'http://edwinharmata.pl'
-  url = 'http://edwinharmata.pl';
+  // 'http://www.edwinharmata.pl/api/?rest_route='
+  url = 'http://www.edwinharmata.pl/api/?rest_route=';
 
   constructor(private http: HttpClient) {
   }
   
   public getPosts() {
-    return this.http.get(`${this.url}/wp-json/wp/v2/posts`);
+    return this.http.get(`${this.url}/wp/v2/posts`);
   }
 
   public getPost(postId:number) {
-    return this.http.get(`${this.url}/wp-json/wp/v2/posts/${postId}`);    
+    return this.http.get(`${this.url}/wp/v2/posts/${postId}`);    
   }
 
   public getSkills() {
-    return this.http.get(`${this.url}/wp-json/wp/v2/skill`);
+    return this.http.get(`${this.url}/wp/v2/skill`);
   }
 
   public getProjects() {
-    return this.http.get(`${this.url}/wp-json/wp/v2/project`);
+    return this.http.get(`${this.url}/wp/v2/project`);
   }
 
   public getFeaturedImageNumber(featuredMediaId: number) {
-    return this.http.get(`${this.url}/wp-json/wp/v2/media/${featuredMediaId}`)    
+    return this.http.get(`${this.url}/wp/v2/media/${featuredMediaId}`)    
   }
 
   public getFeaturedImage(url: string) {

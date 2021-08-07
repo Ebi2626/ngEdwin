@@ -8,7 +8,7 @@ import { RequestService } from '../../services/request.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: any = [];
+  projects: any[];
   
   isDownloading: boolean = false;
 
@@ -17,7 +17,6 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
 
     this.isDownloading = true;
-
 
     this.service.getProjects().subscribe(
       (data:any) => {
@@ -32,7 +31,10 @@ export class ProjectsComponent implements OnInit {
           }          
         });
       },
-      (error) => console.log(error)
+      (error) => {
+        console.log(error);
+        this.isDownloading = false;
+      }
     )
 
   }

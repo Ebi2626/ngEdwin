@@ -1,12 +1,14 @@
 <main class="container">
-    <h1>Projects</h1>
-    <p>During my adventure on the front-end I have tried to dive into many technologies. I belive in philosophy of learning by doing so to discover how some technology works I have always try to prepare some simple project.</p>
-    <p>Below you can see some examples of my learning by doing.</p>
-
-    <ul *ngIf="projects.length > 0 && isDownloading === false">
-        <li *ngFor="let project of projects">
-            <app-project [project]="project"></app-project>
-        </li>
-    </ul>
-    <app-loader *ngIf="isDownloading === true"></app-loader>
+    <section>
+        <h1>Projekty</h1>
+        <p>Podczas mojej frontendowej przygody imałem się wielu technologii. Wyznaję filozofię uczenia-poprzez-robienie, więc rozpoznanie większości technologii wiązało się z utworzeniem jakiegoś projektu. </p>
+        <p>Poniżej znajdziesz kilka przykładów takich projektów zrealizowanych w myśl tej filozofii.</p>
+        <ul *ngIf="projects && !isDownloading">
+            <li *ngFor="let project of projects">
+                <app-project [project]="project"></app-project>
+            </li>
+        </ul>
+        <app-loader *ngIf="isDownloading"></app-loader>
+        <p class="my-5 h4 font-weight-normal text-center" *ngIf="!isDownloading && !projects">Przepraszamy, wystąpił błąd podczas ładowania danych. Spróbuj ponownie później</p>
+    </section>
 </main>

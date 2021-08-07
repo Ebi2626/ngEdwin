@@ -1,7 +1,10 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
 body {
     min-height: 100vh;
     max-width: 100vw;
     overflow-x: hidden;
+    background-color: $light;
 }
 main {
     &.container {
@@ -19,5 +22,11 @@ main {
             min-height: calc(100vh - 160px);
         }
         
+    }
+}
+
+section {
+    &:not(:last-of-type){
+        margin-bottom: 2rem;
     }
 }
