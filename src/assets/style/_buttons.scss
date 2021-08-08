@@ -1,0 +1,8 @@
+.btn {
+    &.btn-drawing {
+        @include drawingBorders;
+        &:hover {
+            @include materialShadowFull;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@mixin drawingBorders {
+    background-color: transparent;
+    border: solid 30px transparent;
+    border-image: url('../img/borders.png') 200;
+}
+
+@mixin materialShadow {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+@mixin materialShadowUp {
+    box-shadow: 0 -10px 20px rgba(0,0,0,0.19), 0 -6px 6px rgba(0,0,0,0.23);
+}
+
+@mixin materialShadowFull {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23), 0 -10px 20px rgba(0,0,0,0.15), 0 -3px 6px rgba(0,0,0,0.20);
+}

@@ -21,13 +21,14 @@ export class ProjectsComponent implements OnInit {
     this.service.getProjects().subscribe(
       (data:any) => {
         this.isDownloading = false;
-        this.projects = data.map((project: { project_name: any; project_description: any; project_link_text: any; project_link_url: any; technologies: string; }) => {
+        this.projects = data.map((project: { project_name: any; project_description: any; project_link_text: any; project_link_url: any; technologies: string; featured_media: number }) => {
           return {
             name: project.project_name,
             description: project.project_description,
             link_text: project.project_link_text,
             link_url: project. project_link_url,
-            technologies: project.technologies.split(',')
+            technologies: project.technologies.split(','),
+            featured_media: project.featured_media
           }          
         });
       },

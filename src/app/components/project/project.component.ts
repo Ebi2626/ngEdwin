@@ -1,11 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss']
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent {
 
   @Input()
   project = {
@@ -13,12 +13,11 @@ export class ProjectComponent implements OnInit {
       description: '',
       link_text: '',
       link_url: '',
-      technologies: <any>[]
+      technologies: <any>[],
+      featured_media: 0
   }
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
+
+

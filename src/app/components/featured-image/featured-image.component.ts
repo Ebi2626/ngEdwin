@@ -14,6 +14,9 @@ export class FeaturedImageComponent implements OnInit, OnChanges {
   @Input()
   startDownloading = false;
 
+  @Input()
+  classes: string[] | string;
+
   dataDownloaded = false;
 
   src: string = '';

@@ -4,9 +4,14 @@
 // Variables
 @import "colors";
 
+// Mixins
+@import "mixins";
+
 // Components
 @import "post";
 @import "loader";
+@import "projects";
+@import "buttons";
 
 // General
 @import "general";

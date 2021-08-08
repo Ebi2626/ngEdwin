@@ -1,11 +1,20 @@
-<h3>{{project.name}}: <a [href]="project.link_url">{{project.link_text}}</a></h3>
-    <dl>
-        <dt>Description:</dt>
-        <dd>{{project.description}}</dd>
-        <dt>Used technologies:</dt>
-        <dd>
-            <ul>
-                <li *ngFor="let technology of project.technologies">{{technology}}</li>
-            </ul>
-        </dd>
-    </dl>
+<article class="card">
+    <div class="card-mainContent">
+        <app-featured-image  *ngIf="project.featured_media !== 0" [id]="project.featured_media" [startDownloading]="true"></app-featured-image>
+        <div class="card-body">
+            <h3 class="card-title h5">{{project.name}}</h3>
+            <p class="card-text">{{project.description}}</p>
+            <dl>
+                <dt>Stos technologiczny:</dt>
+                <dd>
+                    <ul>
+                        <li *ngFor="let technology of project.technologies">{{technology}}</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="card-footer">
+        <a [href]="project.link_url" class="btn btn-drawing text-center w-100">{{project.link_text}}</a>
+    </div>
+</article>

@@ -20,7 +20,6 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ProjectComponent } from './components/project/project.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,14 +35,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     FeaturedImageComponent,
     SkillComponent,
     ProjectsComponent,
-    ProjectComponent
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

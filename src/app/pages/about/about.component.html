@@ -11,8 +11,8 @@
         <h2>Moje umiejętności</h2>
         <p>By zostać kompletnym developerem zdecydowałem się zanurkować głęboko w nieskończone odmęty świata IT i zyskać szerszy obraz na inżynierię oprogramowania.</p>
         <p>Właśnie dlatego zestaw moich umiejętności choć nie zawiera wielu dobrze rozwiniętych specjalizacji, to obejmuje swą szerokością niemal każdy obszar związany z programowaniem.</p>
-        <ul *ngIf="!skillDownloading && skills">
-            <li *ngFor="let skill of skills">
+        <ul class="list-group" *ngIf="!skillDownloading && skills">
+            <li class="list-group-item" *ngFor="let skill of skills">
                 <app-skill [skill]="skill"></app-skill>
             </li>
         </ul>

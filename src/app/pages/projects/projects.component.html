@@ -1,10 +1,10 @@
 <main class="container">
     <section>
         <h1>Projekty</h1>
-        <p>Podczas mojej frontendowej przygody imałem się wielu technologii. Wyznaję filozofię uczenia-poprzez-robienie, więc rozpoznanie większości technologii wiązało się z utworzeniem jakiegoś projektu. </p>
+        <p>Podczas mojej frontendowej przygody imałem się wielu technologii. Wyznaję filozofię "learning by doing", więc rozpoznanie większości technologii wiązało się z utworzeniem jakiegoś projektu. </p>
         <p>Poniżej znajdziesz kilka przykładów takich projektów zrealizowanych w myśl tej filozofii.</p>
-        <ul *ngIf="projects && !isDownloading">
-            <li *ngFor="let project of projects">
+        <ul class="list-unstyled row align-items-stretch" *ngIf="projects && !isDownloading">
+            <li class="col-12 col-md-6 col-xl-4 mb-4 " *ngFor="let project of projects">
                 <app-project [project]="project"></app-project>
             </li>
         </ul>
