@@ -1,0 +1,21 @@
+<form class="row g-3" (submit)="sendMessage()">
+    <div class="col-md-6">
+        <label for="email" class="form-label">Adres e-mail</label>
+        <input ngModel type="email" autocomplete="email" class="form-control" id="email" name="yourEmail">
+    </div>
+    <div class="col-md-6">
+        <label for="name" class="form-label">Imię</label>
+        <input ngModel type="text" autocomplete="given-name" class="form-control" id="name" name="yourName">
+    </div>
+    <div class="col-12">
+        <label for="subject" class="form-label">Temat</label>
+        <input ngModel type="text" autocomplete="off" class="form-control" id="subject" name="yourSubject">
+    </div>
+    <div class="col-12">
+        <label for="message" class="form-label">Wiadomość</label>
+        <textarea ngModel rows="4" autocomplete="off" class="form-control" id="message" name="yourMessage" placeholder="Tutaj wpisz treść swojej wiadomości..."></textarea>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary w-100 mt-4">Wyślij</button>
+    </div>
+</form>

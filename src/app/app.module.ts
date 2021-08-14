@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -18,7 +18,8 @@ import { FeaturedImageComponent } from './components/featured-image/featured-ima
 import { SkillComponent } from './components/skill/skill.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ProjectComponent } from './components/project/project.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -36,13 +37,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     SkillComponent,
     ProjectsComponent,
     ProjectComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,15 +1,43 @@
 <main class="container">
     <section>
-        <h1>O mnie</h1>
-        <p>Co do cholery ma oznaczać 'Front-end Jedi'? Moglibyście zapytać i byłoby to dobre pytanie.</p>
-        <p>Podczas pierwszej pracy jako front-end developer odkryłem jak bardzo ciemna strona mocy kontroluje inżynierię oprogramowania.</p>
-        <p>Żeby stawić czoła mrocznym siłom deadline'ów, presji biznesowej i złym praktykom wytwarzania oprogramowania narzucanym przez klinetów 
-            szukających oszczędności na developmencie, postanowiłem ustanowić własny zestaw zasad, których będę bronił za wszelką cenę.</p>
-        <p>Oto i droga front-endowego Jedi!</p>
+            <h1>O mnie</h1>
+            <p>Czemu 'Front-end Warrior'?</p>
+            <p>
+                Programowanie, a zwłaszcza front-end to niezwykle dynamiczne środowisko, które wymaga od developera nieustannej adaptacji.
+                Takie wymagające warunki sprawiają, że zawodowym developerem może być tylko osoba o duszy wojownika.
+                Należy nie ustawać w treningu, przygotować się na to, że w każdej chwili może pojawić się nowy framework,
+                nowe narzędzie lub nowa paczka npm, którą będzie należało wdrożyć. W każdej chwili może przed nami pojawić się nowe
+                wyzwanie, któremu sprostamy tylko jeśli będziemy w ciągłej gotowości do walki. 
+            </p>
+    </section>
+    <section class="clearfix">
+        <h2>Kim jestem?</h2>
+        <img class="img-fluid d-block rounded float-none mx-auto mx-md-0 float-md-end" width="200" src="http://www.edwinharmata.pl/api/wp-content/uploads/2021/08/Edwin_Harmata-awatar.png" alt="Awatar z moją brodatą twarzą" />
+        <p>Zawsze uważałem takie opisy za sztuczne, ale żeby nazwie strony stało się zadość postaram się zrobić taki opis.</p>
+        <p>Jestem licencjatem z psychologii (sic!), który na studiach zdiagnozował u siebie predyspozycje do pracy z kodem i...</p>
+        <p> Poszedł za ciosem! Po obronie licencjatu postanowiłem zrobić roczną przerwę od kontynuowania studiów i sprawdzić, czy to całe
+            programowanie, to coś dla mnie. Spędziłem rok pracy jako konsultat do spraw personalnych i handlowiec. 
+            W żadnej z tych prac nie widziałem swojej przyszłości, ale za to po pracy z pasją zasiadałem do kolejnych lekcji na 
+            <a href="https://freecodecamp.org">freecodecamp.org</a>.
+        </p>
+        <p>Okazało się, że nauka może stać się równie uzależniająca, co używki i z dnia na dzień stałem się człowiekiem uzależnionym
+            od kolejnej porcji satysfakcji jaką przynosi widok poprawnie działającego kodu. Uznałem, że w pracy chciałbym mieć do czynienia
+            z takimi porcjami zastrzyków satysfakcji oraz wyzwaniami, które sprawiałyby, że satysfakcja byłaby w pełni zasłużona. Tak podjąłem
+            decyzję o kontynuowaniu nauki, tym razem rozpoczynając zaoczne studia z informatyki.
+        </p>
+        <p>
+            Na koniec pierwszego roku studiów, gdy już miałem całkiem solidne podstawy z technologii frontendowych oraz względne zrozumienie
+            szeroko pojmowanej informatyki udało mi się dostać pracę w <a href="https://ilim.lukasiewicz.gov.pl">Instytucie Logistyki i Magazynowania</a>
+            w Poznaniu. Tutaj zacząłem przygodę od pracy z sematycznym kodem HTML, SCSSem oraz bootstrapem, by przejść po pewnym czasie do pracy z Angularem.
+        </p>
+        <p>
+            Obecnie z pasją odkrywam jakie piękno może perfekcjonista odnaleźć we wzorcach projektowych zastosowanych w Angularze i nie ustaję w treningach,
+            by kolejny bój na froncie skończyć z kolejną wygraną na koncie.
+        </p>
     </section>
     <section>
         <h2>Moje umiejętności</h2>
-        <p>By zostać kompletnym developerem zdecydowałem się zanurkować głęboko w nieskończone odmęty świata IT i zyskać szerszy obraz na inżynierię oprogramowania.</p>
+        <p>By zostać kompletnym developerem zdecydowałem się głęboko zanurzyć w nieskończone odmęty świata IT i zyskać szerszy obraz na inżynierię oprogramowania.</p>
         <p>Właśnie dlatego zestaw moich umiejętności choć nie zawiera wielu dobrze rozwiniętych specjalizacji, to obejmuje swą szerokością niemal każdy obszar związany z programowaniem.</p>
         <ul class="list-group" *ngIf="!skillDownloading && skills">
             <li class="list-group-item" *ngFor="let skill of skills">

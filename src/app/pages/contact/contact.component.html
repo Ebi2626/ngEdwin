@@ -3,27 +3,7 @@
         <h1 class="text-center">Kontakt</h1>
         <div class="row">
             <div class="col-12 col-md-10 col-lg-8 mx-auto">
-                <form class="row g-3">
-                    <div class="col-md-6">
-                        <label for="email" class="form-label">Adres e-mail</label>
-                        <input type="email" autocomplete="email" class="form-control" id="email">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="name" class="form-label">Imię</label>
-                        <input type="text" autocomplete="given-name" class="form-control" id="name">
-                    </div>
-                    <div class="col-12">
-                        <label for="subject" class="form-label">Temat</label>
-                        <input type="text" autocomplete="off" class="form-control" id="subject">
-                    </div>
-                    <div class="col-12">
-                        <label for="message" class="form-label">Wiadomość</label>
-                        <textarea rows="4" autocomplete="off" class="form-control" id="message" placeholder="Tutaj wpisz treść swojej wiadomości..."></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary w-100 mt-4">Wyślij</button>
-                    </div>
-                </form>
+                <app-form (passMessage)="verifyMessage($event)" [initialFormValue]="initialMessageValue"></app-form>
             </div>
         </div>
     </section>
