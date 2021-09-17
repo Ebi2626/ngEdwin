@@ -2,7 +2,7 @@
     <section>
         <h1>Projekty</h1>
         <p>Podczas mojej przeprawy na front imałem się wielu technologii, a ponieważ teoria bez praktyki nic nie znaczy, to pisałem w trakcie tej przeprawy sporo kodu.</p>
-        <p>Jako fanatyczny wyznawca pragmatycznej filozofii "learning by doing" stworzyłem wiele projektów, które były moją wersją rozpoznania bojem. Poniżej znajdziesz listę kilku z takich projektów.</p>
+        <p>Jako fanatyczny wyznawca pragmatycznej filozofii "learning by doing" stworzyłem wiele projektów, które były moją wersją rozpoznania bojem. Poniżej znajdziesz listę kilku takich projektów.</p>
         <ul class="list-unstyled row align-items-stretch" *ngIf="projects && !isDownloading">
             <li class="col-12 col-md-6 col-xl-4 mb-4 " *ngFor="let project of projects">
                 <app-project [project]="project"></app-project>
